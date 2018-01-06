@@ -1,0 +1,23 @@
+{
+  "name": "criminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bettercallsimon/criminal.git"
+  },
+  "author": "Simon Charette",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bettercallsimon/criminal/issues"
+  },
+  "homepage": "https://github.com/bettercallsimon/criminal#readme",
+  "dependencies": {
+    "create-react-app": "^1.4.3",
+    "express": "^4.16.2"
+  }
+}
