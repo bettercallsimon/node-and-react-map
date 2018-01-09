@@ -1,0 +1,30 @@
+Structure of the client side components of the game
+
+Menus:
+    menu_title
+    menu_footer
+    menu_newsfeed (like a CNN news bar)
+
+Map:
+    map -> the actual map, with icons and buttons(filter, zoom)
+
+Pop:    {on click pop-up windows, full screen on mobile w/ return button}
+    #map
+    pop_building
+    pop_employee
+        *does include a lot of sub menus, but are all withing this component until further refactor
+    pop_filter          (to check-list select filters of icons shown on the map)
+
+    #title_bar
+    pop_notification    (facebook like notification list, include all newsfeed element)
+    pop_account         (account settings)
+    pop_quit            (quit button, with a ARE YOU SURE confirm button)
+
+    #footer_bar
+    pop_contactbook     (the footer_bar contact book)
+    pop_addressbook      (the footer_bar adressbook)
+    pop_intelbook       (the footer_bar list of intels)
+
+
+
+
