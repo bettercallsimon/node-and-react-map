@@ -1,8 +1,11 @@
 Structure of the client side components of the game
 
+Unlogged user:
+    login   (Sign-up/login page)
+
 Menus:
-    menu_title
-    menu_footer
+    menu_bar_title
+    menu_bar_footer
     menu_newsfeed (like a CNN news bar)
 
 Map:
@@ -16,9 +19,9 @@ Pop:    {on click pop-up windows, full screen on mobile w/ return button}
     pop_filter          (to check-list select filters of icons shown on the map)
 
     #title_bar
-    pop_notification    (facebook like notification list, include all newsfeed element)
-    pop_account         (account settings)
-    pop_quit            (quit button, with a ARE YOU SURE confirm button)
+    pop_notification            (facebook like notification list, include all newsfeed element)
+    pop_account                 (account settings)
+    pop_logout                  (log-out button, with a ARE YOU SURE confirm button)
 
     #footer_bar
     pop_contactbook     (the footer_bar contact book)
