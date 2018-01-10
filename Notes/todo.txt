@@ -1,0 +1,13 @@
+### TODO FOR THIS WHOLE APP! ###
+
+=== CLIENT ===
+
+
+
+=== SERVER ===
+Restrict MAP API usage to the URL of the site, to avoid it gets hijacked
+
+dev notes:
+Google MAP API key: AIzaSyAfDK8BI9pc3BfmaehCa6Ge_gfqzlzWMZ4
+
+
