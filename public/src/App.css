@@ -42,9 +42,21 @@ body {
 
 }
 
+.pop_building {
+  border: 2px solid red;
+  height: 2rem;
+  width: 2rem;
+}
+
+.pop_unit {
+  border: 2px solid blue;
+  height: 2rem;
+  width: 2rem;
+}
+
 .map {
   /* the map */
-  top: 3rem;
+
   z-index: 0;
 }
 
