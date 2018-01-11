@@ -2,8 +2,7 @@ import React, { Component} from 'react';
 import GoogleMapReact from 'google-map-react';
 
 //import components
-import Building from './pop_building';
-import Unit from './pop_unit';
+import MapIcon from './pop_map_icon';
 import axios from 'axios';
 
 
@@ -31,7 +30,7 @@ class Map extends Component {
 
                 {/* TODO: refactor the Building element into an ICON element that gets props that tells them the type */}
                 {this.state.mapData ? this.state.mapData.map(( obj, index) => (
-                    <Building lat={this.state.mapData[index].lat} lng={this.state.mapData[index].lng} />
+                    <MapIcon type={this.state.mapData[index].type} lat={this.state.mapData[index].lat} lng={this.state.mapData[index].lng} />
                 )): null}
 
                 
