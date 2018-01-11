@@ -48,10 +48,16 @@ body {
   width: 2rem;
 }
 
-.pop_unit {
+.pop_unit_closed {
   border: 2px solid blue;
   height: 2rem;
   width: 2rem;
+}
+
+.pop_unit_opened {
+  border: 2px solid blue;
+  height: 16rem;
+  width: 8rem;
 }
 
 .map {

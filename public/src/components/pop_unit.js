@@ -1,28 +1,27 @@
 import React, { Component} from 'react';
 import axios from 'axios';
 
-function clickBuilding() {
-    alert();
-    
-    axios.get('/api/')
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-}
 
 class Unit extends Component {
   constructor(props){
     super(props);
 
+    this.state = {toggleMenu: 'closed'}
+  }
+  
+  //  toggle the 'menu' when clicked (it change CSS class) not sure if I probably just switch component
+  selfClick = () => {
+
+    if(this.state.toggleMenu === 'closed'){
+      this.setState({toggleMenu : 'opened'});
+    } else {
+      this.setState({toggleMenu : 'closed'});
+    }
   }
 
   render() {
     return (
-        <div className="pop_unit" onClick={clickBuilding}></div>
+        <div className={'pop_unit_' + this.state.toggleMenu} onClick={this.selfClick}></div>
     );
   }
 }
