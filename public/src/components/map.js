@@ -11,7 +11,8 @@ class Map extends Component {
     constructor(props){
         super(props);
 
-        this.state = {mapData : []};
+        // set original states for the component
+        this.state = {mapData : [], centerPosition : {lat: 59.95, lng: 30.33}, zoom : 1 };
 
     }
 
@@ -19,8 +20,8 @@ class Map extends Component {
         return (
             <GoogleMapReact
                 //  MAP INIT.
-                defaultCenter={this.props.center}
-                defaultZoom={this.props.zoom}
+                defaultCenter={this.state.centerPosition}
+                defaultZoom={this.state.zoom}
                 className="map"
                 //important to define the size, go figure why I can write anything in it and it work :/
                 style={{height: ''}}
@@ -55,8 +56,9 @@ class Map extends Component {
 
 //  set default values for the Map before we add any changes to it
 Map.defaultProps = {
-  center: {lat: 59.95, lng: 30.33},
-  zoom: 1
+  // useless since I do it in the state -> 
+  // center: {lat: 59.95, lng: 30.33},
+  //zoom: 1
 };
 
 
