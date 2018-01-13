@@ -4,12 +4,28 @@ import React, { Component} from 'react';
 import Building from './pop_building';
 import Unit from './pop_unit';
 
-//  the function act as a icon selector, based on the props.type prop we attribute in
-//  map.js after axios has fetched the data to render on the API
+class mapIcon extends Component {
+  constructor(props){
+    super(props);
+    this.iconSelector = this.iconSelector.bind(this);
 
-function MapIcon(props) {
+    this.state = {toggleMenu: 'closed'}
+
+
+  }
+
+
+  render() {
+    return (
+        this.iconSelector()
+    );
+  }
+}
+
+  //  the method act as a icon selector, based on the props.type prop we attribute in
+mapIcon.iconSelector = () => {
     
-    const iconType = props.type;
+    const iconType = this.props.type;
     
     //  support Building
     if (iconType === 'building') { 
@@ -20,9 +36,9 @@ function MapIcon(props) {
     else if (iconType === 'unit') {  
         return <Unit />;
     }
-    
+
     //handles errors if type is not listed, should upgrade to better error msg instead of just doing nothing
     return null;
 }
 
-export default MapIcon;
+export default Building;

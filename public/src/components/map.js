@@ -30,9 +30,14 @@ class Map extends Component {
                 {/* ====== components on the map at long-lat  ====== */}
 
                 {/* TODO: refactor the Building element into an ICON element that gets props that tells them the type */}
-                {this.state.mapData ? this.state.mapData.map(( obj, index) => (
-                    <MapIcon type={this.state.mapData[index].type} lat={this.state.mapData[index].lat} lng={this.state.mapData[index].lng} />
-                )): null}
+                {(this.state.mapData ? this.state.mapData.map(( obj, index) => (
+                    <MapIcon 
+                        type={this.state.mapData[index].type} 
+                        lat={this.state.mapData[index].lat} 
+                        lng={this.state.mapData[index].lng}
+                        size={null/* either open or collapsed, so pop_map_icon can switch component from just an icon to the whole thing*/}
+                    />
+                )): null)}
 
                 
                 {/* ==/== END OF MAP's LIST OF COMPONENTS ==/== */}
