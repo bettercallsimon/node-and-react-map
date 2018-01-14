@@ -5,6 +5,8 @@ import GoogleMapReact from 'google-map-react';
 import MapIcon from './pop_map_icon';
 import axios from 'axios';
 
+import Building from './pop_building';
+
 
 
 class Map extends Component {
@@ -15,8 +17,38 @@ class Map extends Component {
         this.state = {mapData : [], centerPosition : {lat: 59.95, lng: 30.33}, zoom : 1 };
 
     }
+    beenClick = () => {
+        console.log('component has been clicked');
+    }
+
+    placeIcon = () => {
+        
+        //  check if mapData has something to draw...
+        if(this.state.mapData.length > 0) {
+            
+        //  ...loop into it, send props to get back the correct component
+        return (
+            this.state.mapData.map(( obj, index) => ( 
+                    <MapIcon 
+                        type={obj.type} 
+                        lat={obj.lat} 
+                        lng={obj.lng}
+
+                        //add a click function 
+                    />
+                )
+            )
+        )
+        
+        //  ...return null if not (it usually happen once every load until fetch result come back)
+        } else {
+            return null;
+        }
+
+    }
 
     render() {
+        
         return (
             <GoogleMapReact
                 //  MAP INIT.
@@ -25,22 +57,14 @@ class Map extends Component {
                 className="map"
                 //important to define the size, go figure why I can write anything in it and it work :/
                 style={{height: ''}}
-                >
+            >
 
-                {/* ====== components on the map at long-lat  ====== */}
+            {/* ====== components on the map at long-lat  ====== */}
 
-                {/* TODO: refactor the Building element into an ICON element that gets props that tells them the type */}
-                {(this.state.mapData ? this.state.mapData.map(( obj, index) => (
-                    <MapIcon 
-                        type={this.state.mapData[index].type} 
-                        lat={this.state.mapData[index].lat} 
-                        lng={this.state.mapData[index].lng}
-                        size={null/* either open or collapsed, so pop_map_icon can switch component from just an icon to the whole thing*/}
-                    />
-                )): null)}
+            {this.placeIcon()}
 
-                
-                {/* ==/== END OF MAP's LIST OF COMPONENTS ==/== */}
+            
+            {/* ==/== END OF MAP's LIST OF COMPONENTS ==/== */}
             </GoogleMapReact>
         );
     }
@@ -58,14 +82,5 @@ class Map extends Component {
 		});
 	}
 }
-
-//  set default values for the Map before we add any changes to it
-Map.defaultProps = {
-  // useless since I do it in the state -> 
-  // center: {lat: 59.95, lng: 30.33},
-  //zoom: 1
-};
-
-
 
 export default Map;

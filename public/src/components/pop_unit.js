@@ -14,8 +14,10 @@ class Unit extends Component {
 
     if(this.state.toggleMenu === 'closed'){
       this.setState({toggleMenu : 'opened'});
+      console.log('opened')
     } else {
       this.setState({toggleMenu : 'closed'});
+      console.log('closed')
     }
   }
 
