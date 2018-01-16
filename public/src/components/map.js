@@ -14,7 +14,7 @@ class Map extends Component {
         super(props);
 
         // set original states for the component
-        this.state = {mapData : [], centerPosition : {lat: 59.95, lng: 30.33}, zoom : 1 };
+        this.state = {mapData : [], centerPosition : {lat: 30.95, lng: 5.33}, zoom : 2 };
 
     }
     beenClick = () => {

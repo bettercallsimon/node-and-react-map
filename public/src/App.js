@@ -7,6 +7,7 @@ import axios from 'axios';
  */
 import MenuBarTitle from './components/menu_bar_title';
 import Map from './components/map';
+import Login from './components/login';
 import MenuBarFooter from './components/menu_bar_footer';
 
 class App extends Component {
@@ -14,27 +15,67 @@ class App extends Component {
 		super(props);
 
 
-		this.state = {status : 'idle', appTitle: 'Criminal'};
+		this.state = {logged : false, appTitle: 'Criminal'};
 
 	}
 	
 	render() {
-		return (
-			<div className="App">
-			{/* * THE ACTUAL CLIENT CODE */}
-
-				<div className="appWrapper">
-
-					{/* === APP STRUCTURE === */}
+		
+		if(this.state.logged === true) {
+			return (
+				<div className="App">
+				{/* * THE ACTUAL CLIENT CODE */}
+	
 					
+						<div className="layout">
+							{/* === APP STRUCTURE === */}
+						
+							{/* menu_bar_title */}
+							<MenuBarTitle appTitle={this.state.appTitle} />
+								{/* pop_notification */}
+								{/* pop_account */}
+								{/* pop_logout */}
+		
+							{/* IF (LOGGED) map ELSE login */}
+							<Map />
+		
+								{/* pop_filter */}
+									{/* child of map: pop_building */}
+									{/* child of map: pop_employee */}
+		
+							{/* menu_bar_footer */}
+							<MenuBarFooter />
+								{/* menu_newsfeed */}
+								{/* pop_contactbook */}
+								{/* pop_addressbook */}
+								{/* pop_intelbook */}
+							</div>
+
+					
+				
+				{/* end of App's main div */}
+				</div>
+			);
+		}
+		else if (this.state.logged === false) {
+			return (
+				<div className="App">
+				{/* * THE ACTUAL CLIENT CODE */}
+	
+					{/* === APP STRUCTURE === */}
+				
 					{/* menu_bar_title */}
 					<MenuBarTitle appTitle={this.state.appTitle} />
 						{/* pop_notification */}
 						{/* pop_account */}
 						{/* pop_logout */}
 
-					{/* IF (LOGGED) map ELSE login */}
-					<Map />
+						<div className="map">
+							<Login />
+						</div>
+						
+					
+
 						{/* pop_filter */}
 							{/* child of map: pop_building */}
 							{/* child of map: pop_employee */}
@@ -45,12 +86,16 @@ class App extends Component {
 						{/* pop_contactbook */}
 						{/* pop_addressbook */}
 						{/* pop_intelbook */}
-
+						
+				{/* end of App's main div */}
 				</div>
-			
-			{/* end of App's main div */}
-			</div>
-		);
+			);
+		}
+		
+		
+		
+		
+		
 	}
 
 }
