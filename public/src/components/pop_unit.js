@@ -1,6 +1,10 @@
 import React, { Component} from 'react';
 import axios from 'axios';
 
+/**
+ * TODO: Use conditionnal rendering using the state.toggleMenu to either render
+ */
+
 
 class Unit extends Component {
   constructor(props){
@@ -22,9 +26,20 @@ class Unit extends Component {
   }
 
   render() {
-    return (
-        <div className={'pop_unit_' + this.state.toggleMenu} onClick={this.selfClick}></div>
-    );
+	
+	//	conditionnal rendering
+    if(this.state.toggleMenu === 'closed'){
+		return (
+			<div className={'pop_unit_closed'} onClick={this.selfClick}></div>
+		);
+	} 
+	else if (this.state.toggleMenu === 'opened'){
+		return (
+			<div className={'pop_unit_opened'} onClick={this.selfClick}></div>
+		);
+	}
+    
+    
   }
 }
 

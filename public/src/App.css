@@ -56,8 +56,9 @@ body {
 
 .pop_unit_opened {
   border: 2px solid blue;
-  height: 16rem;
-  width: 8rem;
+  background: rgb(29, 29, 29);
+  height: 32rem;
+  width: 16rem;
 }
 
 .map {
