@@ -21,7 +21,7 @@ class App extends Component {
 	
 	render() {
 		
-		if(this.state.logged === true) {
+		if(this.state.logged === false) {
 			return (
 				<div className="App">
 				{/* * THE ACTUAL CLIENT CODE */}
