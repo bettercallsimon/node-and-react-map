@@ -6,6 +6,7 @@
  const router = express.Router();
 
  router.get('/', (req, res, next) => {
+    
     console.log('someone accessed the server');
  });
 

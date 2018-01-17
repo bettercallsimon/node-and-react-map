@@ -55,11 +55,7 @@ class Map extends Component {
                 defaultCenter={this.state.centerPosition}
                 defaultZoom={this.state.zoom}
                 className="map"
-                defaultOptions={{ fullscreenControl: false }}
-                              
-                style={{ height: 'calc(100vh - 6rem)', width: '100%' }}
-                //important to define the size, go figure why I can write anything in it and it work :/
-                // style={{height: ''}}
+                
             >
 
             {/* ====== components on the map at long-lat  ====== */}
