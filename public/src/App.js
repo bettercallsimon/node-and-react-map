@@ -5,7 +5,7 @@ import axios from 'axios';
 /**
  * import components
  */
-import MenuBarTitle from './components/menu_bar_title';
+import MenuBarHeader from './components/menu_bar_header';
 import Map from './components/map';
 import Login from './components/login';
 import MenuBarFooter from './components/menu_bar_footer';
@@ -30,8 +30,8 @@ class App extends Component {
 						<div className="layout">
 							{/* === APP STRUCTURE === */}
 						
-							{/* menu_bar_title */}
-							<MenuBarTitle appTitle={this.state.appTitle} />
+							{/* menu_bar_header */}
+							<MenuBarHeader appTitle={this.state.appTitle} />
 								{/* pop_notification */}
 								{/* pop_account */}
 								{/* pop_logout */}
@@ -65,7 +65,7 @@ class App extends Component {
 					{/* === APP STRUCTURE === */}
 				
 					{/* menu_bar_title */}
-					<MenuBarTitle appTitle={this.state.appTitle} />
+					<MenuBarHeader appTitle={this.state.appTitle} />
 						{/* pop_notification */}
 						{/* pop_account */}
 						{/* pop_logout */}
