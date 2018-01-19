@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //  send traffic to the route/index.js file where express.Router() handle every requests
-// yeah!
 app.use('/', routes);
 
 //  a very basic way to start to listen, could be upgraded
