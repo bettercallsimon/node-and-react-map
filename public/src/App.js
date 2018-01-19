@@ -15,13 +15,13 @@ class App extends Component {
 		super(props);
 
 
-		this.state = {logged : false, appTitle: 'Criminal'};
+		this.state = {logged : false, appTitle: 'Crmnl'};
 
 	}
 	
 	render() {
 		
-		if(this.state.logged === false) {
+		if(this.state.logged === true) {
 			return (
 				<div className="App">
 				{/* * THE ACTUAL CLIENT CODE */}

@@ -39,12 +39,24 @@ body {
 
 /* === PAGES SPECIFIC === */
 
-.login_page_layout {
- 
-  border: 1px solid red;
-  background: gray;
-  height: auto;
+.login_page_header, .login_page_log_input {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_page_title {
+  color: 000;
+}
+
+.login_page_log_input {
   
+  justify-content: flex-end;
+ 
+}
+
+.login_page_layout_login p, input {
+ margin: 1rem;
 }
 
 /* === HEADER-FOOTER MENU === */

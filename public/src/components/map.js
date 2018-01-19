@@ -14,7 +14,11 @@ class Map extends Component {
         super(props);
 
         // set original states for the component
-        this.state = {mapData : [], centerPosition : {lat: 30.95, lng: 5.33}, zoom : 2 };
+        this.state = {
+            mapData : [], 
+            centerPosition : {lat: 30.95, lng: 5.33},
+            zoom : 2 
+        };
 
     }
     beenClick = () => {
@@ -47,14 +51,19 @@ class Map extends Component {
 
     }
 
+    onChildClick = () => {
+        console.log('child clicked!');
+    }
+
     render() {
         
         return (
             <GoogleMapReact
                 //  MAP INIT.
-                defaultCenter={this.state.centerPosition}
-                defaultZoom={this.state.zoom}
+                center={this.state.centerPosition}
+                zoom={this.state.zoom}
                 className="map"
+                onChildClick={console.log(this)}
                 
             >
 
