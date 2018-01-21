@@ -18,6 +18,8 @@ class Login extends Component {
         
         return (
             <div className="layout">
+               
+                {/* header section */}
                 <div className="login_page_header">
                 
                     <div className="login_page_title">
@@ -32,8 +34,25 @@ class Login extends Component {
                         <input type="button" id="login_button" value="login"/>      
                         <p><a href="#">forgot your password?</a></p>        
                     </div>
-
                 </div>
+                
+                {/* Sell the concept + subscribe dual section */}
+                <div className="login_page_content">
+                    <div className="login_page_gameconcept">
+                        insert facebook style picture that explain the game
+                    </div>
+                    <div className="login_page_subscribeform">
+                        
+                        <h2>inscription</h2>
+                        <p>username:</p>
+                        <input type="text"/>
+                        <p>password</p>
+                        <input type="text"/>
+                        <input type="button" id="" value="register"/>
+                    </div>
+                </div>
+
+
              </div>
         );
     }

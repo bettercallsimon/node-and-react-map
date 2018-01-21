@@ -37,7 +37,7 @@ body {
 }
 
 
-/* === PAGES SPECIFIC === */
+/* === LOGIN PAGE SPECIFIC === */
 
 .login_page_header, .login_page_log_input {
   background: white;
@@ -57,6 +57,18 @@ body {
 
 .login_page_layout_login p, input {
  margin: 1rem;
+}
+
+.login_page_content {
+
+}
+
+.login_page_content {
+
+}
+
+div.login_page_subscribeform {
+  
 }
 
 /* === HEADER-FOOTER MENU === */
