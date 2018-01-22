@@ -40,42 +40,49 @@ body {
 /* === LOGIN PAGE SPECIFIC === */
 
 .login_page_header, .login_page_log_input {
-  background: white;
+  background: rgb(158, 158, 158);
   display: flex;
   justify-content: space-between;
 }
 
 .login_page_title {
-  color: 000;
+  color: #000;
+  padding-left: 1rem;
 }
 
 .login_page_log_input {
-  
   justify-content: flex-end;
- 
+  padding-right: 1rem;
 }
 
-.login_page_layout_login p, input {
+.login_page_layout_login p, input, a  {
  margin: 1rem;
 }
 
 .login_page_content {
-
+  background: white;
+  display: flex;
+  justify-content: space-around;
 }
 
-.login_page_content {
-
+.login_page_gameconcept {
+  width: 60%;
+  display: flex;
+  flex-direction: center;
 }
 
-div.login_page_subscribeform {
-  
+.login_page_subscribeform {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 /* === HEADER-FOOTER MENU === */
 
 .menu_bar_header{
  
-  background-color: #333;
+  background-color: #25292E;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -93,7 +100,7 @@ div.login_page_subscribeform {
 
 .menu_bar_footer{
 
-  background-color: #333;
+  background-color: #25292E;
   position: fixed;
   bottom: 0px;
   left: 0px;
