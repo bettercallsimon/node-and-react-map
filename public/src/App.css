@@ -40,6 +40,24 @@ body {
   bottom: 3rem;
 }
 
+/* === GENERAL BUTTONS === */
+
+.btn_light {
+  border-radius: 2px;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background: #f6f7f9;
+  border: 1px solid #ced0d4;
+  color: #4b4f56;
+}
+    .btn_light:hover {
+      background: #e9ebee;
+    }
+
+    .btn_light:active {
+      background: #d8dade;
+      border-color: #d8dade;
+    }
 
 /* === LOGIN PAGE SPECIFIC === */
 

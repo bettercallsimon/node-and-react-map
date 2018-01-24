@@ -31,7 +31,7 @@ class Login extends Component {
                         <input type="text" id="username_login_input"/>
                         <p>Password:</p>
                         <input type="text" id="password_login_input"/>
-                        <input type="button" id="login_button" value="login"/>      
+                        <input type="button" id="login_button" className="btn_light" value="login"/>      
                         <p><a href="#">forgot your password?</a></p>        
                     </div>
                 </div>
@@ -48,7 +48,7 @@ class Login extends Component {
                         <input type="text"/>
                         <p>password</p>
                         <input type="text"/>
-                        <input type="button" id="" value="register"/>
+                        <input type="button" className="btn_light" id="" value="register"/>
                     </div>
                 </div>
 
