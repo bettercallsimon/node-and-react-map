@@ -27,10 +27,10 @@ class Login extends Component {
                     </div>
 
                     <div className="login_page_log_input">
-                        <p>Username:</p>
-                        <input type="text" id="username_login_input"/>
-                        <p>Password:</p>
-                        <input type="text" id="password_login_input"/>
+                        
+                        <input type="text" className="input_header_txt" id="username_login_input" placeholder="username"/>
+                        
+                        <input type="text" className="input_header_txt" id="password_login_input" placeholder="password"/>
                         <input type="button" id="login_button" className="btn_light" value="login"/>      
                         <p><a href="#">forgot your password?</a></p>        
                     </div>

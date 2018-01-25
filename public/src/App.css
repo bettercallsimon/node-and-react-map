@@ -1,6 +1,6 @@
 /* === GENERAL WRAPPERS === */
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -14,11 +14,6 @@ body {
   min-height: 100%; /*for some browsers*/
   background: lightgray;
   margin: 0;
-
-
-  
-
-  
 }
 
 .app{
@@ -40,7 +35,12 @@ body {
   bottom: 3rem;
 }
 
-/* === GENERAL BUTTONS === */
+/* === GENERAL INPUTS === */
+
+.input_header_txt {
+  border: 1px solid gray;
+  border-radius: 2px;
+}
 
 .btn_light {
   border-radius: 2px;
