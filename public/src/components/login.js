@@ -26,13 +26,13 @@ class Login extends Component {
                         <h2>Already a member?</h2>
                     </div>
 
-                    <div className="login_page_log_input">
+                    <div className="login_page_header_input">
                         
-                        <input type="text" className="input_header_txt" id="username_login_input" placeholder="username"/>
+                        <input type="text" className="input_squarestyle" id="username_login_input" placeholder="username"/>
                         
-                        <input type="text" className="input_header_txt" id="password_login_input" placeholder="password"/>
+                        <input type="password" className="input_squarestyle" id="password_login_input" placeholder="password"/>
                         <input type="button" id="login_button" className="btn_light" value="login"/>      
-                        <p><a href="#">forgot your password?</a></p>        
+                        <a href="#">forgot your password?</a>        
                     </div>
                 </div>
                 
@@ -43,11 +43,11 @@ class Login extends Component {
                     </div>
                     <div className="login_page_subscribeform">
                         
-                        <h2>inscription</h2>
-                        <p>username:</p>
-                        <input type="text"/>
-                        <p>password</p>
-                        <input type="text"/>
+                        <h2>Sign Up</h2>
+                        <p>Player name:</p>
+                        <input type="text" className="input_roundstyle"/>
+                        <p>Choose a good password:</p>
+                        <input type="password" className="input_roundstyle"/>
                         <input type="button" className="btn_light" id="" value="register"/>
                     </div>
                 </div>

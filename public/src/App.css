@@ -37,9 +37,18 @@ body {
 
 /* === GENERAL INPUTS === */
 
-.input_header_txt {
+.input_squarestyle {
   border: 1px solid gray;
   border-radius: 2px;
+  padding-left: 0.75rem;
+}
+
+.input_roundstyle {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  
 }
 
 .btn_light {
@@ -61,7 +70,7 @@ body {
 
 /* === LOGIN PAGE SPECIFIC === */
 
-.login_page_header, .login_page_log_input {
+.login_page_header, .login_page_header_input {
   background: rgb(158, 158, 158);
   display: flex;
   justify-content: space-between;
@@ -72,14 +81,33 @@ body {
   padding-left: 1rem;
 }
 
-.login_page_log_input {
+.login_page_header_input {
   justify-content: flex-end;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
-.login_page_layout_login p, input, a  {
- margin: 1rem;
+.login_page_header_input input {
+  justify-content: flex-end;
+  margin: 1rem 0.5rem;
+  font-size: 0.85rem;
 }
+
+.login_page_header_input a {
+  margin-top: 1.5rem;
+  color: lightgray;
+}
+
+  .login_page_content p {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .login_page_content .input_roundstyle  {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .login_page_content .btn_light  {
+    margin: 0 6rem 0 6rem;
+  }
 
 .login_page_content {
   background: white;
