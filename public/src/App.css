@@ -68,6 +68,44 @@ body {
       border-color: #d8dade;
     }
 
+/* === HEADER TITLE AND NAV === */
+
+.menu_bar_header_layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_bar_header_title h1 {
+  color: silver;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  margin: 0;
+  }
+
+.menu_bar_header_nav {
+  display: flex;
+
+}
+
+.menu_bar_header_icon {
+  background: gray;
+  border: 1px solid white;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.45rem 0.75rem 0.25rem 0.25rem;
+}
+
+.menu_bar_header{
+  
+   background-color: #25292E;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 3rem;
+ 
+ }
+ 
 /* === LOGIN PAGE SPECIFIC === */
 
 .login_page_header, .login_page_header_input {
@@ -128,26 +166,7 @@ body {
   padding: 1rem;
 }
 
-/* === HEADER-FOOTER MENU === */
-
-.menu_bar_header{
- 
-  background-color: #25292E;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 3rem;
-
-}
-
-.menu_bar_header h1{
-  color: silver;
-  padding-left: 1rem;
-  padding-top: 0.25rem;
-  margin: 0;
-}
-
+/* === FOOTER NEWSFEED AND NAV === */
 .menu_bar_footer{
 
   background-color: #25292E;

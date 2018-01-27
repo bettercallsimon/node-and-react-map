@@ -2,6 +2,8 @@ Structure of the client side components of the game
 
 Unlogged user:
     login   (Sign-up/login page)
+        Logged-in page = Map, unless email hasnt been confirmed
+    
 
 Menus:
     menu_bar_title
