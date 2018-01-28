@@ -15,7 +15,7 @@ class App extends Component {
 		super(props);
 
 
-		this.state = {logged : false, appTitle: 'TheOpenRoads'};
+		this.state = {logged : true, appTitle: 'TheOpenRoads'};
 
 	}
 	
