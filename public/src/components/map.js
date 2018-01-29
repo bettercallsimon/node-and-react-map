@@ -20,7 +20,7 @@ class Map extends Component {
             mapData : [], 
             centerPosition : {lat: 30.95, lng: 5.33},
             zoom : 2, 
-            mapStyle: {styles: mapTheme}
+            mapStyle: {styles: mapTheme, backgroundColor: "#021019"}
         };
 
     }
