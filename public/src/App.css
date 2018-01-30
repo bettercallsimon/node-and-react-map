@@ -69,10 +69,20 @@ body {
     }
 
 /* === HEADER TITLE AND NAV === */
+.menu_bar_header{
+   background-color: #25292E;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 3rem;
+   border-bottom: solid 1px rgb(90, 90, 90);
+ }
 
 .menu_bar_header_layout {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .menu_bar_header_title h1 {
@@ -94,17 +104,6 @@ body {
   height: 2rem;
   margin: 0.45rem 0.75rem 0.25rem 0.25rem;
 }
-
-.menu_bar_header{
-  
-   background-color: #25292E;
-   position: fixed;
-   top: 0px;
-   left: 0px;
-   width: 100%;
-   height: 3rem;
- 
- }
  
 /* === LOGIN PAGE SPECIFIC === */
 
@@ -175,6 +174,8 @@ body {
   left: 0px;
   width: 100%;
   height: 3rem;
+  border-top: solid 1px rgb(90, 90, 90);
+  
 }
 
 .menu_bar_footer p {

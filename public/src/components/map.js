@@ -25,9 +25,10 @@ function createMapOptions(maps) {
     return {
       zoomControlOptions: {
         position: maps.ControlPosition.TOP_RIGHT,
-        // style: maps.ZoomControlStyle.LARGE
+        style: maps.ZoomControlStyle.DEFAULT
       },
       // apply my own color theme, edited via /helpers/mapTheme.json 
+      // map straight out of https://snazzymaps.com parsed as JSON
       styles: mapTheme, 
       backgroundColor: "#021019",
       mapTypeControl: false,
@@ -92,7 +93,6 @@ class Map extends Component {
                 center={this.state.centerPosition}
                 zoom={this.state.zoom}
                 //setup map theme
-                //map straight out of https://snazzymaps.com parsed as JSON
                 options={createMapOptions}
                 className="map"
             >
