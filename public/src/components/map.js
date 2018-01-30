@@ -9,6 +9,33 @@ import Building from './pop_building';
 
 const mapTheme = require("./helpers/mapTheme.json");
 
+/**
+ *   Straight from the docs of google-map-react, this is how they put options in the map
+ *   I still dont know where the 'maps' argument get send to this 
+ *   function since its called without it in render
+ *   this is copy paste code and I'm not proud of it
+ */
+function createMapOptions(maps) {
+    // next props are exposed at maps
+    // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
+    // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
+    // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
+    // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
+    // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
+    return {
+      zoomControlOptions: {
+        position: maps.ControlPosition.TOP_RIGHT,
+        // style: maps.ZoomControlStyle.LARGE
+      },
+      // apply my own color theme, edited via /helpers/mapTheme.json 
+      styles: mapTheme, 
+      backgroundColor: "#021019",
+      mapTypeControl: false,
+      fullscreenControl: false
+      
+    };
+  }
+
 
 
 class Map extends Component {
@@ -19,8 +46,7 @@ class Map extends Component {
         this.state = {
             mapData : [], 
             centerPosition : {lat: 30.95, lng: 5.33},
-            zoom : 2, 
-            mapStyle: {styles: mapTheme, backgroundColor: "#021019"}
+            zoom : 2
         };
 
     }
@@ -67,7 +93,7 @@ class Map extends Component {
                 zoom={this.state.zoom}
                 //setup map theme
                 //map straight out of https://snazzymaps.com parsed as JSON
-                options={this.state.mapStyle}
+                options={createMapOptions}
                 className="map"
             >
 
