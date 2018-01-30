@@ -35,7 +35,10 @@ class Unit extends Component {
 	} 
 	else if (this.state.toggleMenu === 'opened'){
 		return (
-			<div className={'pop_unit_opened'} onClick={this.selfClick}></div>
+			<div className={'pop_unit_opened'} onClick={this.selfClick}>
+        <p>lat: {this.props.lat}</p>
+        <p>lng: {this.props.lng}</p>
+      </div>
 		);
 	}
     

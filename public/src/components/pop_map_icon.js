@@ -23,13 +23,15 @@ class MapIcon extends Component {
         if (iconType === 'building') { 
         
             return (
-                <Building />
+                //passing lat and lng to the Building component
+                <Building lat={this.props.lat} lng={this.props.lng} />
             );
         } 
 
         //  support Unit
         else if (iconType === 'unit') {  
-            return <Unit />
+            //passing lat and lng to the Unit component
+            return <Unit lat={this.props.lat} lng={this.props.lng}  />
         }
 
         //handles errors if type is not listed, should upgrade to better error msg instead of just doing nothing

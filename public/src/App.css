@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+p {
+  color: white;
+}
+
 .app{
   background: #ACDBFD;
   -webkit-box-sizing: border-box;
@@ -76,13 +80,16 @@ body {
    left: 0px;
    width: 100%;
    height: 3rem;
-   border-bottom: solid 1px rgb(90, 90, 90);
+   
  }
 
 .menu_bar_header_layout {
   display: flex;
   justify-content: space-between;
   
+  /* weird fix to apply border */
+  padding-bottom: 2px;
+  border-bottom: solid 1px rgb(90, 90, 90);
 }
 
 .menu_bar_header_title h1 {
@@ -216,11 +223,15 @@ body {
   border: 2px solid blue;
   height: 2rem;
   width: 2rem;
+  
 }
 
 .pop_unit_opened {
+  position: relative;
+  left: -7rem;
   border: 2px solid blue;
   background: rgb(29, 29, 29);
   height: 32rem;
   width: 16rem;
+  
 }
