@@ -7,6 +7,7 @@ import axios from 'axios';
  */
 import MenuBarHeader from './components/menu_bar_header';
 import Map from './components/map';
+
 import Login from './components/login';
 import MenuBarFooter from './components/menu_bar_footer';
 
@@ -38,6 +39,7 @@ class App extends Component {
 		
 							{/* IF (LOGGED) map ELSE login */}
 							<Map />
+								
 		
 								{/* pop_filter */}
 									{/* child of map: pop_building */}
