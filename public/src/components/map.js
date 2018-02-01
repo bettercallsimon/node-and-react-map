@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react';
 //import components
 import MapIcon from './pop_map_icon';
 import axios from 'axios';
-import MapFilter from './pop_map_filter';
+
 import Building from './pop_building';
 
 const mapTheme = require("./helpers/mapTheme.json");
@@ -89,22 +89,19 @@ class Map extends Component {
         
         return (
             <GoogleMapReact
-                //  MAP INIT.
-                center={this.state.centerPosition}
-                zoom={this.state.zoom}
-                //setup map theme
-                options={createMapOptions}
-                className="map"
-            >
+                    //  MAP INIT.
+                    center={this.state.centerPosition}
+                    zoom={this.state.zoom}
+                    //setup map theme
+                    options={createMapOptions}
+                    className="map"
+                >
 
-            {/* ====== components on the map at long-lat  ====== */}
-
-            {this.placeIcon()}
-            <MapFilter />
-
-            
-            {/* ==/== END OF MAP's LIST OF COMPONENTS ==/== */}
-            </GoogleMapReact>
+                {/* ====== components on the map at long-lat  ====== */}
+                {this.placeIcon()}
+                        
+                {/* ==/== END OF MAP's LIST OF COMPONENTS ==/== */}
+            </GoogleMapReact>     
             
         );
     }

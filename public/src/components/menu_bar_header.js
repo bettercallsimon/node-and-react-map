@@ -1,8 +1,10 @@
 import React from 'react';
 
+
 const MenuBarHeader = (props) => {
     return (
         <div className="menu_bar_header">
+        
            <div className="menu_bar_header_layout">
                 <div className="menu_bar_header_title">
                         <h1>{props.appTitle}</h1>

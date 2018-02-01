@@ -38,6 +38,7 @@ class App extends Component {
 								{/* pop_logout */}
 		
 							{/* IF (LOGGED) map ELSE login */}
+							
 							<Map />
 								
 		
