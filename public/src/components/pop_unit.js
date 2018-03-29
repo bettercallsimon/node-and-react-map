@@ -1,10 +1,4 @@
 import React, { Component} from 'react';
-import axios from 'axios';
-
-/**
- * TODO: Use conditionnal rendering using the state.toggleMenu to either render
- */
-
 
 class Unit extends Component {
   constructor(props){
@@ -36,8 +30,8 @@ class Unit extends Component {
 	else if (this.state.toggleMenu === 'opened'){
 		return (
 			<div className={'pop_unit_opened'} onClick={this.selfClick}>
-        <p>lat: {this.props.lat}</p>
-        <p>lng: {this.props.lng}</p>
+        <p>{this.props.name}</p>
+        <p>Cette application React affiche toutes les compagnies d'ébénisterie trouvées via Google Places dans un rayon de 50km autour des bureaux de Cienapps</p>
       </div>
 		);
 	}

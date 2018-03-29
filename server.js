@@ -1,5 +1,5 @@
 /**
- * Criminal server
+ * mapping server demo
  */
 
 //  import dependencies
@@ -24,4 +24,4 @@ app.use('/', routes);
 
 //  a very basic way to start to listen, could be upgraded
 app.listen(port);
-console.log(`CRIMINAL SERVER V.1.0.0 RUNNING ON PORT: ${port}`);
+console.log(`MAPPING SERVER V.1.0.0 RUNNING ON PORT: ${port}`);

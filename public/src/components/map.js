@@ -11,7 +11,7 @@ const mapTheme = require("./helpers/mapTheme.json");
 
 /**
  *   Straight from the docs of google-map-react, this is how they put options in the map
- *   I still dont know where the 'maps' argument get send to this 
+ *   I still dont know where the 'maps' argument get sent to this 
  *   function since its called without it in render
  *   this is copy paste code and I'm not proud of it
  */
@@ -46,13 +46,10 @@ class Map extends Component {
         // set original states for the component
         this.state = {
             mapData : [], 
-            centerPosition : {lat: 30.95, lng: 5.33},
-            zoom : 2
+            centerPosition : {lat: 45.847442, lng: -74.062830},
+            zoom : 10
         };
 
-    }
-    beenClick = () => {
-        console.log('component has been clicked');
     }
 
     placeIcon = () => {
@@ -64,11 +61,11 @@ class Map extends Component {
         return (
             this.state.mapData.map(( obj, index) => ( 
                     <MapIcon 
-                        type={obj.type} 
+                        name={obj.name}
+                        isHome={obj.isHome}
+                        viscinity={obj.vicinity}
                         lat={obj.lat} 
                         lng={obj.lng}
-
-                        //add a click function 
                     />
                 )
             )

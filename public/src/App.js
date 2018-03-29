@@ -15,8 +15,9 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
-
-		this.state = {logged : true, appTitle: 'Dispatch'};
+		//logged: false triggers the loggin interface
+		//use logged: true to show the map that automatically fetch the data
+		this.state = {logged : true, appTitle: 'Demo pour Cienapps'};
 
 	}
 	

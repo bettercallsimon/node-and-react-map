@@ -214,26 +214,44 @@ p {
 /* === MAP RELATED === */
 
 .pop_building {
-  border: 2px solid red;
-  height: 2rem;
-  width: 2rem;
+  
+  width: 0;
+	height: 0;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-bottom: 2rem solid blue;
+
+}
+
+.pop_building p {
+  color: yellow;
+  background-color:rgb(158, 158, 158, 0.6);
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  width: 5rem;
+  padding: 2px;
+
 }
 
 .pop_unit_closed {
-  border: 2px solid blue;
-  height: 2rem;
-  width: 2rem;
+  width: 0;
+	height: 0;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-bottom: 2rem solid red;
   
 }
 
 .pop_unit_opened {
   position: relative;
-  left: -7rem;
-  border: 2px solid blue;
+  left: -3.5rem;
+  top: -1rem;
+  border: 2px solid red;
   background: rgb(29, 29, 29);
-  height: 32rem;
-  width: 16rem;
+  height: 10rem;
+  width: 12rem;
   z-index: 5000;
+  text-align: center;
   
 }
 
